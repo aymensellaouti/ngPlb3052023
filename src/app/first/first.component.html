@@ -1,0 +1,21 @@
+<div class="alert alert-success">
+  <p [hidden]="isHidden">first works!</p>
+  <p>cc {{ name }}</p>
+  <input
+    #myInput
+    (change)="changeName(myInput.value)"
+    class="form-control" type="text">
+  <button
+    (click)="showHide()"
+    class="btn btn-danger">
+    Show / Hide
+  </button>
+  <app-second></app-second>
+</div>
+
+
+<!-- Balises (objets) -->
+
+<!-- Attributs => état de la balise -->
+
+<!-- Evenement => un comportement -->
