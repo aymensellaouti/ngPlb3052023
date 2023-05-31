@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Cv } from '../model/cv.model';
 
 @Component({
@@ -7,5 +7,5 @@ import { Cv } from '../model/cv.model';
   styleUrls: ['./detail-cv.component.css']
 })
 export class DetailCvComponent {
-  cv: Cv | null = null;
+  @Input() cv: Cv | null = null;
 }

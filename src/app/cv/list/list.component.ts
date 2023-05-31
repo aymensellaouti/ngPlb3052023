@@ -1,11 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cv } from '../model/cv.model';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
   @Input() cvs: Cv[] = [];
+  @Output() forwardCv = new EventEmitter<Cv>()
+  onSelectCv(cv: Cv) {
+    this.forwardCv.emit(cv);
+  };
 }
