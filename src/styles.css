@@ -2,7 +2,8 @@
 and also import other style files */
 @import '~bootstrap';
 @import '~bootstrap-icons';
+@import 'assets/css/rotating-card.css';
 
-p {
+/* p {
   color: gold;
-}
+} */

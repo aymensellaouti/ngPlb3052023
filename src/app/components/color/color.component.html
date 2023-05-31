@@ -1,0 +1,13 @@
+<div [style.backgroundColor]="color">Color</div>
+
+<input
+  (change)="changeColor(colorInput.value)"
+
+  #colorInput
+type="text" class="form-control mt-2">
+
+<input type="color" [(ngModel)]="color" class="form-control">
+
+<button
+  (click)="changeColor(defaultColor)"
+  class="btn btn-danger mt-2">Reset</button>
