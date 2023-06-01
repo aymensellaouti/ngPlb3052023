@@ -22,6 +22,9 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 import { FiboPipe } from './pipes/fibo.pipe';
+import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { LoggerService } from './services/logger.service';
+import { SayHelloService } from './services/say-hello.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,8 @@ import { FiboPipe } from './pipes/fibo.pipe';
     HighlightDirective,
     RainbowDirective,
     BtcToUsdPipe,
-    FiboPipe
+    FiboPipe,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,
