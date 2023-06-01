@@ -8,6 +8,5 @@ export class Cv {
     public job = '',
     public cin = '',
     public age = 0,
-  ) {
-  }
+  ) {}
 }

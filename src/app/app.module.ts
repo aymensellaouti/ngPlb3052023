@@ -25,6 +25,7 @@ import { FiboPipe } from './pipes/fibo.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { LoggerService } from './services/logger.service';
 import { SayHelloService } from './services/say-hello.service';
+import { TodoComponent } from './todo/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SayHelloService } from './services/say-hello.service';
     RainbowDirective,
     BtcToUsdPipe,
     FiboPipe,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
