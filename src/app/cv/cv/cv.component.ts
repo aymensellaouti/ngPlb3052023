@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Cv } from '../model/cv.model';
 import { LoggerService } from 'src/app/services/logger.service';
 import { SayHelloService } from 'src/app/services/say-hello.service';
+import { TodoService } from 'src/app/todo/service/todo.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cv',
@@ -31,34 +33,22 @@ export class CvComponent {
       '123',
       4
     ),
-    new Cv(
-      3,
-      'sellaouti',
-      'skander',
-      '',
-      'eleve',
-      '123',
-      4
-    ),
-    new Cv(
-      4,
-      'sellaouti',
-      'skander',
-      '             ',
-      'eleve',
-      '123',
-      4
-    ),
+    new Cv(3, 'sellaouti', 'skander', '', 'eleve', '123', 4),
+    new Cv(4, 'sellaouti', 'skander', '             ', 'eleve', '123', 4),
   ];
   constructor(
     private logger: LoggerService,
-    private sayHello: SayHelloService
+    private sayHello: SayHelloService,
+    private todoService: TodoService,
+    private toastr: ToastrService
   ) {
     this.logger.log('cc je suis le cvComponent');
     this.sayHello.hello();
+    this.toastr.info('Bienvenu dans notre cvTech');
   }
   selectCv(cv: Cv): void {
     this.selectedCv = cv;
-    console.log("cvComponent : ", cv);
+    console.log('cvComponent : ', cv);
+    this.todoService.logTodos();
   }
 }

@@ -3,7 +3,7 @@ and also import other style files */
 @import '~bootstrap';
 @import '~bootstrap-icons';
 @import 'assets/css/rotating-card.css';
-
+@import 'ngx-toastr/toastr';
 /* p {
   color: gold;
 } */
