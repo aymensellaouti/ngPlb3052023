@@ -1,0 +1,13 @@
+<p appHighlight>test</p>
+<p
+  appHighlight
+  [in]="'lightblue'"
+  [out]="'pink'"
+>test2</p>
+lint
+<div
+  (click)="interrupteur()"
+  class="lampe" [ngClass]="{
+  eteinte: !isAllume,
+  allume:  isAllume
+}">ng-class works!</div>
