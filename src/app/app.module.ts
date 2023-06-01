@@ -19,6 +19,9 @@ import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
+import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
+import { FiboPipe } from './pipes/fibo.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { HighlightDirective } from './directives/highlight.directive';
     NgstyleComponent,
     MiniWordComponent,
     NgClassComponent,
-    HighlightDirective
+    HighlightDirective,
+    RainbowDirective,
+    BtcToUsdPipe,
+    FiboPipe
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Cv } from '../model/cv.model';
 })
 export class CvComponent {
   selectedCv: Cv | null = null;
+  today = new Date();
   cvs: Cv[] = [
     new Cv(
       1,
@@ -23,6 +24,24 @@ export class CvComponent {
       'sellaouti',
       'skander',
       'rotating_card_profile3.png',
+      'eleve',
+      '123',
+      4
+    ),
+    new Cv(
+      3,
+      'sellaouti',
+      'skander',
+      '',
+      'eleve',
+      '123',
+      4
+    ),
+    new Cv(
+      4,
+      'sellaouti',
+      'skander',
+      '             ',
       'eleve',
       '123',
       4
