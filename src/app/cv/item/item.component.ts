@@ -8,6 +8,7 @@ import { Cv } from '../model/cv.model';
 })
 export class ItemComponent {
   @Input() cv: Cv | null = null;
+  @Input() size = 50;
   @Output() selectCv = new EventEmitter<Cv>();
   onSelectCv() {
     if(this.cv)
