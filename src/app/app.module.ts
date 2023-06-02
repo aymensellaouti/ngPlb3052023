@@ -36,8 +36,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { CvInfosComponent } from './cv/cv-infos/cv-infos.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestformComponent } from './components/testform/testform.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import { AddCvComponent } from './cv/add-cv/add-cv.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { TestObservableComponent } from './components/test-observable/test-obser
     TestformComponent,
     LoginComponent,
     TestObservableComponent,
+    AddCvComponent,
   ],
   imports: [
     BrowserModule,

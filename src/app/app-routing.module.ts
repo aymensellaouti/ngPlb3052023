@@ -8,12 +8,15 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second.component';
 import { CvInfosComponent } from './cv/cv-infos/cv-infos.component';
 import { NF404Component } from './components/nf404/nf404.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   // /cv
   { path: '', component: FirstComponent },
   { path: 'cv', component: CvComponent },
+  { path: 'cv/add', component: AddCvComponent, canActivate: [AuthGuard] },
   { path: 'cv/:id', component: CvInfosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoComponent },

@@ -21,16 +21,18 @@ export class CvInfosComponent {
     const id = this.activatedRoute.snapshot.params['id'];
     // Je chercher le cv de cet id la
     // Si le cv existe je l'affiche
-    this.cv = this.cvService.getCvById(+id);
+    this.cvService.getCvById(+id).subscribe({
+      next: (cv) => {this.cv = cv;},
+      error: (e) => { this.router.navigate([MES_ROUTES.cv]);}
+    });
     // Sinon je redirige vers la page de la liste des cvs
-    if (!this.cv) {
-      this.router.navigate([MES_ROUTES.cv]);
-    }
   }
   onDelete() {
     if(this.cv) {
-      this.cvService.deleteCv(this.cv);
-      this.router.navigate([MES_ROUTES.cv]);
+      this.cvService.deleteCv(this.cv.id).subscribe({
+        next: () => {this.router.navigate([MES_ROUTES.cv]);},
+        error: (e) => { console.log(e);}
+      });
     }
   }
 }
