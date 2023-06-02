@@ -8,12 +8,14 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second.component';
 import { CvInfosComponent } from './cv/cv-infos/cv-infos.component';
 import { NF404Component } from './components/nf404/nf404.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   // /cv
   { path: '', component: FirstComponent },
   { path: 'cv', component: CvComponent },
   { path: 'cv/:id', component: CvInfosComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'color', component: ColorComponent },
   { path: 'word', component: MiniWordComponent },
