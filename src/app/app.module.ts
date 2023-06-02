@@ -28,9 +28,6 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 import { FiboPipe } from './pipes/fibo.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
-import { LoggerService } from './services/logger.service';
-import { SayHelloService } from './services/say-hello.service';
-import { TodoComponent } from './todo/todo/todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CvInfosComponent } from './cv/cv-infos/cv-infos.component';
@@ -40,6 +37,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { AuthInterceptor } from './auth/interceptors/auth.interceptor';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
@@ -63,7 +61,6 @@ import { AuthInterceptor } from './auth/interceptors/auth.interceptor';
     BtcToUsdPipe,
     FiboPipe,
     DefaultImagePipe,
-    TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
     CvInfosComponent,
