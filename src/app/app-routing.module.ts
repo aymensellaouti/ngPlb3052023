@@ -13,7 +13,7 @@ const routes: Routes = [
   // /cv
   { path: '', component: FirstComponent },
   { path: 'cv', component: CvComponent },
-  { path: 'cv/:id/:name', component: CvInfosComponent },
+  { path: 'cv/:id', component: CvInfosComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'color', component: ColorComponent },
   { path: 'word', component: MiniWordComponent },
