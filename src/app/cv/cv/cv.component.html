@@ -3,10 +3,13 @@
     <div class="alert alert-warning">
       {{ today | date: 'medium' | titlecase }}
     </div>
-    <app-list [cvs]="cvs" (forwardCv)="selectCv($event)"></app-list>
+    <div class="alert alert-secondary">
+      Nombre de click : {{ nbClick }}
+    </div>
+    <app-list [cvs]="cvs"></app-list>
   </div>
   <div class="col">
-    <app-detail-cv [cv]="selectedCv"></app-detail-cv>
+    <app-detail-cv></app-detail-cv>
   </div>
 </div>
 <div class="row">
