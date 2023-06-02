@@ -7,3 +7,6 @@ and also import other style files */
 /* p {
   color: gold;
 } */
+input.ng-invalid.ng-touched {
+  border: red solid 2px;
+}
