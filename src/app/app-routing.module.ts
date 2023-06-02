@@ -10,7 +10,7 @@ import { CvInfosComponent } from './cv/cv-infos/cv-infos.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
-import { AuthGuard } from './auth/auth.guard';
+import { AuthGuard } from './auth/guard/auth.guard';
 
 const routes: Routes = [
   // /cv

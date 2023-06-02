@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CvService } from '../services/cv.service';
 import { Cv } from '../model/cv.model';
 import { MES_ROUTES } from 'src/app/config/routes.config';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-cv-infos',
@@ -14,7 +15,8 @@ export class CvInfosComponent {
   constructor(
     private activatedRoute: ActivatedRoute,
     private cvService: CvService,
-    private router: Router
+    private router: Router,
+    public authService: AuthService
   ) {
     console.log(activatedRoute.snapshot);
     // Je récupére mon id
